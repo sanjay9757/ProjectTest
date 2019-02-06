@@ -6,7 +6,7 @@ jobs:
       - add_ssh_keys
       - run: |
            ##sudo apt update && sudo apt install sshpass -y
-           ssh -i /home/circleci/.ssh/id_dsa -v ubuntu@54.213.166.229 'ls'
+           ssh -v ubuntu@54.213.166.229 'ls'
            #sshpass -p 'sanjay123' ssh -t -oStrictHostKeyChecking=no ubuntu@52.15.131.199 'ls'
            #sshpass -p $abc_server_pass ssh ubuntu@52.15.131.199 'ls'
 
