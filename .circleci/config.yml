@@ -3,14 +3,8 @@ jobs:
 vultr_deploy_fetchsh:
   machine: true
   steps:
-#   - run: |
-#     command: |
- #     ssh-keyscan 18.222.134.76 >> ~/.ssh/known_hosts 'ls'
- #  - run: |
-  #         ssh root@useast-0.iogamemaker.com 'ls'
     - run: |
-      #    sudo apt update && sudo apt install sshpass -y
-           ssh ubuntu@52.15.131.199 'ls'
+           sudo ssh ubuntu@52.15.131.199 'ls'
 
 workflows:
 version: 2
