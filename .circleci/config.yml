@@ -5,7 +5,7 @@ jobs:
     steps:
       - run: |
            sudo apt update && sudo apt install sshpass -y
-           ssh ubuntu@52.15.131.199 'ls'
+           sudo ssh ubuntu@52.15.131.199 'ls'
 
 workflows:
   version: 2
