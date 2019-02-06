@@ -7,7 +7,7 @@ vultr_deploy_fetchsh:
            sudo ssh ubuntu@52.15.131.199 'ls'
 
 workflows:
-version: 2
+#version: 2
 rolling_update:
   jobs:
     - vultr_deploy_fetchsh:
