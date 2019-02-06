@@ -12,7 +12,7 @@ workflows:
   rolling_update:
     jobs:
       - vultr_deploy_fetchsh:
-        filters:
-          branches:
-            only:
-              - master
+          filters:
+             branches:
+               only:
+                 - master
