@@ -8,11 +8,9 @@ jobs:
            ##sudo apt update && sudo apt install sshpass -y
            ##eval $(ssh-agent -s)
            ls -la /home/circleci/.ssh/
-           cat /home/circleci/.ssh/authorized_keys
-           sudo chown circleci:circleci /home/circleci/.ssh/authorized_keys
-           ls -la /home/circleci/.ssh/
-           ssh-keyscan gihub.com >> ~/.ssh/known_hosts
-           ssh -i /home/circleci/.ssh/id_rsa_7c1e0d288c451e3b3c79e55d1f834379 -v ubuntu@54.213.166.229 'ls'
+           ssh-keyscan ubuntu@52.15.131.199 
+           ssh-keyscan ubuntu@52.15.131.199 >> ~/.ssh/known_hosts
+           sudo ssh -i /home/circleci/.ssh/id_rsa_7c1e0d288c451e3b3c79e55d1f834379 -v ubuntu@54.213.166.229 'ls'
            #sshpass -p 'sanjay123' ssh -t -oStrictHostKeyChecking=no ubuntu@52.15.131.199 'ls'
            #sshpass -p $abc_server_pass ssh ubuntu@52.15.131.199 'ls'
 
