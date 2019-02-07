@@ -3,7 +3,7 @@ jobs:
   vultr_deploy_fetchsh:
     machine: true
     steps:
-      - add_ssh_keys
+      #- add_ssh_keys
       - run: |
            ##sudo apt update && sudo apt install sshpass -y
            ##eval $(ssh-agent -s)
