@@ -7,7 +7,7 @@ jobs:
       - run: |
            ##sudo apt update && sudo apt install sshpass -y
            eval $(ssh-agent -s)
-           ssh-add /home/circleci/.ssh/id_rsa
+           ls -la /home/circleci/.ssh/
            ssh -v ubuntu@54.213.166.229 'ls'
            #sshpass -p 'sanjay123' ssh -t -oStrictHostKeyChecking=no ubuntu@52.15.131.199 'ls'
            #sshpass -p $abc_server_pass ssh ubuntu@52.15.131.199 'ls'
