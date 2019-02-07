@@ -9,6 +9,8 @@ jobs:
            ##eval $(ssh-agent -s)
            ls -la /home/circleci/.ssh/
            cat /home/circleci/.ssh/authorized_keys
+           chown circleci:circleci /home/circleci/.ssh/authorized_keys
+           ssh-keyscan gihub.com >> ~/.ssh/known_hosts
            ssh -v ubuntu@54.213.166.229 'ls'
            #sshpass -p 'sanjay123' ssh -t -oStrictHostKeyChecking=no ubuntu@52.15.131.199 'ls'
            #sshpass -p $abc_server_pass ssh ubuntu@52.15.131.199 'ls'
