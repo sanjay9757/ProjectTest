@@ -3,15 +3,15 @@ jobs:
   vultr_deploy_fetchsh:
     machine: true
     steps:
-      #- add_ssh_keys
+      - add_ssh_keys
       - run: |
            ##sudo apt update && sudo apt install sshpass -y
            ##eval $(ssh-agent -s)
            #ls -la /home/circleci/.ssh/
            #ssh-keyscan 52.15.131.199 
            #ssh-keyscan 52.15.131.199 >> ~/.ssh/known_hosts
-           #sudo ssh -i /home/circleci/.ssh/id_rsa_7c1e0d288c451e3b3c79e55d1f834379 -v ubuntu@54.213.166.229 'ls'
-           sudo ssh ubuntu@54.213.166.229 'ls /home'
+           sudo ssh -i /home/circleci/.ssh/id_rsa_7c1e0d288c451e3b3c79e55d1f834379 -v ubuntu@54.213.166.229 'ls'
+           #sudo ssh ubuntu@54.213.166.229 'ls /home'
            #sshpass -p 'sanjay123' ssh -t -oStrictHostKeyChecking=no ubuntu@52.15.131.199 'ls'
            #sshpass -p $abc_server_pass ssh ubuntu@52.15.131.199 'ls'
 
